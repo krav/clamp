@@ -102,7 +102,7 @@ module Clamp
         line
         line "#{heading}:"
         items.reject { |i| i.respond_to?(:hidden?) && i.hidden? }.each do |item|
-          line "\n#{item.subheading}:" if item.respond_to?(:subheading) and item.subheading
+          line "\n#{item.subheading}:" if item.respond_to?(:subheading) && item.subheading
           label, description = item.help
           description.each_line do |line|
             row(label, line)
